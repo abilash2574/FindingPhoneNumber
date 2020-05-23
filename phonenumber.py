@@ -18,4 +18,13 @@ def isphonenumber(number):
             return False
     return True
 
-print(isphonenumber("98433 37331"))
+
+text = "Hey this is my number note it, 98433 37331. make sure you call me, see you later"
+
+for i in range(len(text)):
+    chunk = text[i:i+11]
+    if isphonenumber(chunk):
+        print("The phone number is "+ chunk)
+        break
+    else:
+        print("Phone number can't be found")
